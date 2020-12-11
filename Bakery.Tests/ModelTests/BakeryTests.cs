@@ -10,7 +10,7 @@ namespace Bakery.Tests
       [TestMethod]
       public void BreadConstructor_CreatesInstanceOfBread_Bread()
       {
-        Bread newBread = new Bread(5);
+        Bread newBread = new Bread(5, 1);
         Assert.AreEqual(typeof(Bread), newBread.GetType());
       }
       [TestMethod]
@@ -23,7 +23,7 @@ namespace Bakery.Tests
       public void GetBreadPrice_ReturnsBreadPrice_Int()
       {
         int testBreadPrice = 5;
-        Bread newBread = new Bread(testBreadPrice);
+        Bread newBread = new Bread(testBreadPrice, 2);
         int confirmBreadPrice = newBread.BreadPrice;
         Assert.AreEqual(testBreadPrice, confirmBreadPrice);
       }
@@ -40,9 +40,10 @@ namespace Bakery.Tests
       {
         int testBreadPrice = 5;
         int testBreadQuant = 1;
+        int failBreadQuant = 2;
         Bread newBread = new Bread(testBreadPrice, testBreadQuant);
         int confirmBreadQuant = newBread.BreadQuant;
-        Assert.AreEqual(testBreadQuant, confirmBreadQuant);
+        Assert.AreEqual(failBreadQuant, confirmBreadQuant);
       }
     }
 }

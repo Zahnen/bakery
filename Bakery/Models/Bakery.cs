@@ -3,9 +3,11 @@ namespace Bakery.Models
   public class Bread
   {
     public int BreadPrice { get; }
-    public Bread(int breadPrice)
+    public int BreadQuant { get; }
+    public Bread(int breadPrice, int breadQuant)
     {
       BreadPrice = breadPrice;
+      BreadQuant = breadQuant;
     }
   }
   public class Pastry
