@@ -74,12 +74,13 @@ namespace Bakery.Tests
         int confirmPastryTotalPrice = newPastry.GetPastryTotal();
         Assert.AreEqual(testPastryTotalPrice, confirmPastryTotalPrice);
       }
-      [TestMethod]
-      public void GetGrandTotal_ReturnsOrderTotalPriceinList_List()
-      {
-        List<int> GrandTotal = new List<int> {};
-        Bread newBread = new Bread(5, 3);
-        Assert.AreEqual(GrandTotal[0], newBread.addPrice(newBread.GetBreadTotal()));
-      }
     }
 }
+
+      // [TestMethod]
+      // public void GetGrandTotal_ReturnsOrderTotalPriceinList_List()
+      // {
+      //   List<int> GrandTotal = new List<int> {};
+      //   Bread newBread = new Bread(5, 3);
+      //   Assert.AreEqual(GrandTotal[0], newBread.addPrice(newBread.GetBreadTotal()));
+      // }
