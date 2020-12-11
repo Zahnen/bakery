@@ -13,5 +13,11 @@ namespace Bakery.Tests
         Bread newBread = new Bread();
         Assert.AreEqual(typeof(Bread), newBread.GetType());
       }
+      [TestMethod]
+      public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+      {
+        Pastry newPastry = new Pastry();
+        Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+      }
     }
 }
