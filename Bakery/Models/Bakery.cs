@@ -13,9 +13,11 @@ namespace Bakery.Models
   public class Pastry
   {
     public int PastryPrice { get; }
-    public Pastry(int pastryPrice)
+    public int PastryQuant { get; }
+    public Pastry(int pastryPrice, int pastryQuant)
     {
       PastryPrice = pastryPrice;
+      PastryQuant = pastryQuant;
     }
   }
 }
