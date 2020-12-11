@@ -59,9 +59,10 @@ namespace Bakery.Tests
         int testBreadPrice = 5;
         int testBreadQuant = 3;
         int testBreadTotalPrice = 10;
+        int failBreadTotalPrice = 15;
         Bread newBread = new Bread(testBreadPrice, testBreadQuant);
         int confirmBreadTotalPrice = newBread.GetBreadTotal();
-        Assert.AreEqual(testBreadTotalPrice, confirmBreadTotalPrice);
+        Assert.AreEqual(failBreadTotalPrice, confirmBreadTotalPrice);
       }
     }
 }
