@@ -68,11 +68,10 @@ namespace Bakery.Tests
       {
         int testPastryPrice = 2;
         int testPastryQuant = 3;
-        // int testPastryTotalPrice = 5;
-        int failPastryTotalPrice = 6;
+        int testPastryTotalPrice = 5;
         Pastry newPastry = new Pastry(testPastryPrice, testPastryQuant);
         int confirmPastryTotalPrice = newPastry.GetPastryTotal();
-        Assert.AreEqual(failPastryTotalPrice, confirmPastryTotalPrice);
+        Assert.AreEqual(testPastryTotalPrice, confirmPastryTotalPrice);
       }
     }
 }
