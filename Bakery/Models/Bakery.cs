@@ -10,11 +10,15 @@ namespace Bakery.Models
     public int BreadTotalPrice { get; set; }
     public int BreadDiscount { get; set; }
     public int DiscountedBreadTotalPrice { get; set; }
+    public int BulkDiscount { get; set; }
+    public int InstancesOfDiscount { get; set; }
+
     public Bread(int breadPrice, int breadQuant)
     {
       BreadPrice = breadPrice;
       BreadQuant = breadQuant;
     }
+
     public int GetBreadTotal()
     {
       BreadTotalPrice = this.BreadPrice * this.BreadQuant;
@@ -24,12 +28,21 @@ namespace Bakery.Models
         DiscountedBreadTotalPrice = BreadTotalPrice - BreadDiscount;
         return DiscountedBreadTotalPrice;
       }
+      else if (BreadQuant > 3 && BreadTotalPrice % 3 != 0)
+      {
+        InstancesOfDiscount = BreadQuant / 3;
+        BulkDiscount = 5 * InstancesOfDiscount;
+        DiscountedBreadTotalPrice = BreadTotalPrice - BulkDiscount;
+        return DiscountedBreadTotalPrice;
+
+      }
       else
       {
         return BreadTotalPrice;  
       }
     }
   }
+
   public class Pastry
   {
     public int PastryPrice { get; }
@@ -37,11 +50,13 @@ namespace Bakery.Models
     public int PastryTotalPrice { get; set; }
     public int PastryDiscount { get; set; }
     public int DiscountedPastryTotalPrice { get; set; }
+
     public Pastry(int pastryPrice, int pastryQuant)
     {
       PastryPrice = pastryPrice;
       PastryQuant = pastryQuant;
     }
+
     public int GetPastryTotal()
     {
       PastryTotalPrice = this.PastryPrice * this.PastryQuant;
@@ -58,19 +73,3 @@ namespace Bakery.Models
     }
   }
 }
-
-    // public int AddBreadTotal()
-    // {
-    //   if (DiscountedBreadTotalPrice > 0)
-    //   {
-    //     Order.GrandTotal.Add(DiscountedBreadTotalPrice);
-    //   }
-    //   else if (BreadTotalPrice > 0)
-    //   {
-    //     Order.GrandTotal.Add(BreadTotalPrice);
-    //   }
-    //   else
-    //   {
-    //     Order.GrandTotal.Add(0);
-    //   }
-    // }
