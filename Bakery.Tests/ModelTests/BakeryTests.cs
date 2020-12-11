@@ -40,10 +40,9 @@ namespace Bakery.Tests
       {
         int testBreadPrice = 5;
         int testBreadQuant = 1;
-        int failBreadQuant = 2;
         Bread newBread = new Bread(testBreadPrice, testBreadQuant);
         int confirmBreadQuant = newBread.BreadQuant;
-        Assert.AreEqual(failBreadQuant, confirmBreadQuant);
+        Assert.AreEqual(testBreadQuant, confirmBreadQuant);
       }
     }
 }
