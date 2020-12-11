@@ -35,5 +35,14 @@ namespace Bakery.Tests
         int confirmPastryPrice = newPastry.PastryPrice;
         Assert.AreEqual(testPastryPrice, confirmPastryPrice);
       }
+      [TestMethod]
+      public void GetBreadQuantity_ReturnsBreadQuantity_Int()
+      {
+        int testBreadPrice = 5;
+        int testBreadQuant = 1;
+        Bread newBread = new Bread(testBreadPrice, testBreadQuant);
+        int confirmBreadQuant = newBread.BreadQuant;
+        Assert.AreEqual(testBreadQuant, confirmBreadQuant);
+      }
     }
 }
