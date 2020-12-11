@@ -1,11 +1,7 @@
 namespace Bakery.Models
 {
-  publc class Bread
+  public class Bread
   {
 
-  }
-  publc class Pastry
-  {
-    
   }
 }
