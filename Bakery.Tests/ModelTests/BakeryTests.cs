@@ -17,7 +17,8 @@ namespace Bakery.Tests
       public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
       {
         Pastry newPastry = new Pastry();
-        Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+        string failPastry = "This is an example to confirm Pastry Object does not have the same data type as a string";
+        Assert.AreEqual(typeof(Pastry), failPastry.GetType());
       }
     }
 }
