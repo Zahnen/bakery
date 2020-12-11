@@ -31,10 +31,9 @@ namespace Bakery.Tests
       public void GetPastryPrice_ReturnsPastryPrice_Int()
       {
         int testPastryPrice = 2;
-        int failPastryPrice = 4;
         Pastry newPastry = new Pastry(testPastryPrice);
         int confirmPastryPrice = newPastry.PastryPrice;
-        Assert.AreEqual(failPastryPrice, confirmPastryPrice);
+        Assert.AreEqual(testPastryPrice, confirmPastryPrice);
       }
     }
 }
