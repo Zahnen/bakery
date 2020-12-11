@@ -23,8 +23,7 @@ namespace Bakery.Tests
       public void GetPrice_ReturnsPrice_String()
       {
         int testPrice = 5;
-        int failPrice = 10;
-        Bread newBread = new Bread(failPrice);
+        Bread newBread = new Bread(testPrice);
         int confirmPrice = newBread.BreadPrice;
         Assert.AreEqual(testPrice, confirmPrice);
       }
