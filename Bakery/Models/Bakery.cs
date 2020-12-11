@@ -10,6 +10,10 @@ namespace Bakery.Models
   }
   public class Pastry
   {
-
+    public int PastryPrice { get; }
+    public Pastry(int pastryPrice)
+    {
+      PastryPrice = pastryPrice;
+    }
   }
 }
