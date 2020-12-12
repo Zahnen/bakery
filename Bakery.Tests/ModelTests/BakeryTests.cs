@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
-using System.Collections.Generic;
 using System;
 
 namespace Bakery.Tests
@@ -76,11 +75,3 @@ namespace Bakery.Tests
       }
     }
 }
-
-      // [TestMethod]
-      // public void GetGrandTotal_ReturnsOrderTotalPriceinList_List()
-      // {
-      //   List<int> GrandTotal = new List<int> {};
-      //   Bread newBread = new Bread(5, 3);
-      //   Assert.AreEqual(GrandTotal[0], newBread.addPrice(newBread.GetBreadTotal()));
-      // }
