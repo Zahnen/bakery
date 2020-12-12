@@ -7,12 +7,7 @@ namespace Bakery.Models
   {
     public int BreadPrice { get; set; }
     public int BreadQuant { get; set; }
-    public int BreadTotalPrice { get; set; }
-    public int BreadDiscount { get; set; }
-    public int DiscountedBreadTotalPrice { get; set; }
-    public int BulkDiscount { get; set; }
-    public int InstancesOfDiscount { get; set; }
-
+    
     public Bread(int breadPrice, int breadQuant)
     {
       BreadPrice = breadPrice;
@@ -21,23 +16,23 @@ namespace Bakery.Models
 
     public int GetBreadTotal()
     {
-      BreadTotalPrice = this.BreadPrice * this.BreadQuant;
-      if (BreadTotalPrice % 3 == 0)
+      int breadTotalPrice = BreadPrice * BreadQuant;
+      if (breadTotalPrice % 3 == 0)
       {
-        BreadDiscount = BreadTotalPrice / 3;
-        DiscountedBreadTotalPrice = BreadTotalPrice - BreadDiscount;
-        return DiscountedBreadTotalPrice;
+        int breadDiscount = breadTotalPrice / 3;
+        int discountedBreadTotalPrice = breadTotalPrice - breadDiscount;
+        return discountedBreadTotalPrice;
       }
-      else if (BreadQuant > 3 && BreadTotalPrice % 3 != 0)
+      else if (BreadQuant > 3 && breadTotalPrice % 3 != 0)
       {
-        InstancesOfDiscount = BreadQuant / 3;
-        BulkDiscount = 5 * InstancesOfDiscount;
-        DiscountedBreadTotalPrice = BreadTotalPrice - BulkDiscount;
-        return DiscountedBreadTotalPrice;
+        int instancesOfDiscount = BreadQuant / 3;
+        int bulkDiscount = 5 * instancesOfDiscount;
+        int discountedBreadTotalPrice = breadTotalPrice - bulkDiscount;
+        return discountedBreadTotalPrice;
       }
       else
       {
-        return BreadTotalPrice;  
+        return breadTotalPrice;  
       }
     }
   }

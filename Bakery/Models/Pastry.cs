@@ -7,12 +7,6 @@ namespace Bakery.Models
   {
     public int PastryPrice { get; }
     public int PastryQuant { get; }
-    // public int PastryTotalPrice { get; set; }
-    // public int PastryDiscount { get; set; }
-    // public int DiscountedPastryTotalPrice { get; set; }
-    // public int InstancesOfDiscount { get; set; }
-    // public int BulkDiscount { get; set; }
-
 
     public Pastry(int pastryPrice, int pastryQuant)
     {
