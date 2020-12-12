@@ -7,11 +7,11 @@ namespace Bakery.Models
   {
     public int PastryPrice { get; }
     public int PastryQuant { get; }
-    public int PastryTotalPrice { get; set; }
-    public int PastryDiscount { get; set; }
-    public int DiscountedPastryTotalPrice { get; set; }
-    public int InstancesOfDiscount { get; set; }
-    public int BulkDiscount { get; set; }
+    // public int PastryTotalPrice { get; set; }
+    // public int PastryDiscount { get; set; }
+    // public int DiscountedPastryTotalPrice { get; set; }
+    // public int InstancesOfDiscount { get; set; }
+    // public int BulkDiscount { get; set; }
 
 
     public Pastry(int pastryPrice, int pastryQuant)
@@ -22,23 +22,23 @@ namespace Bakery.Models
 
     public int GetPastryTotal()
     {
-      PastryTotalPrice = this.PastryPrice * this.PastryQuant;
-      if (PastryTotalPrice % 3 == 0)
+      int pastryTotalPrice = PastryPrice * PastryQuant;
+      if (pastryTotalPrice % 3 == 0)
       {
-        PastryDiscount = PastryQuant / 3;
-        DiscountedPastryTotalPrice = PastryTotalPrice - PastryDiscount;
-        return DiscountedPastryTotalPrice;
+        int pastryDiscount = PastryQuant / 3;
+        int discountedPastryTotalPrice = pastryTotalPrice - pastryDiscount;
+        return discountedPastryTotalPrice;
       }
-      else if (PastryQuant > 3 && PastryTotalPrice % 3 != 0)
+      else if (PastryQuant > 3 && pastryTotalPrice % 3 != 0)
       {
-        InstancesOfDiscount = PastryQuant / 3;
-        BulkDiscount = 1 * InstancesOfDiscount;
-        DiscountedPastryTotalPrice = PastryTotalPrice - BulkDiscount;
-        return DiscountedPastryTotalPrice;
+        int instancesOfDiscount = PastryQuant / 3;
+        int bulkDiscount = 1 * instancesOfDiscount;
+        int discountedPastryTotalPrice = pastryTotalPrice - bulkDiscount;
+        return discountedPastryTotalPrice;
       }
       else
       {
-        return PastryTotalPrice;  
+        return pastryTotalPrice;  
       }
     }
   }
