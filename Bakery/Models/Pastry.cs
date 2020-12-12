@@ -5,8 +5,8 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public int PastryPrice { get; }
-    public int PastryQuant { get; }
+    public int PastryPrice { get; set;}
+    public int PastryQuant { get; set;}
 
     public Pastry(int pastryPrice, int pastryQuant)
     {
