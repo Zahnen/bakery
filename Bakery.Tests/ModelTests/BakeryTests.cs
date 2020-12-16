@@ -68,7 +68,7 @@ namespace Bakery.Tests
       {
         int testBreadPrice = 5;
         int testBreadQuant = 15;
-        int testBreadTotalPrice = 75;
+        int testBreadTotalPrice = 50;
         Bread newBread = new Bread(testBreadPrice, testBreadQuant);
         int confirmBreadTotalPrice = newBread.GetBreadTotal();
         Assert.AreEqual(testBreadTotalPrice, confirmBreadTotalPrice);
