@@ -108,7 +108,7 @@ namespace Bakery.Tests
       {
         int testPastryPrice = 2;
         int testPastryQuant = 1;
-        int testPastryTotalPrice = 5;
+        int testPastryTotalPrice = 2;
         Pastry newPastry = new Pastry(testPastryPrice, testPastryQuant);
         int confirmPastryTotalPrice = newPastry.GetPastryTotal();
         Assert.AreEqual(testPastryTotalPrice, confirmPastryTotalPrice);
