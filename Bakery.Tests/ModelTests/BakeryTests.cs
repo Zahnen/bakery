@@ -77,8 +77,8 @@ namespace Bakery.Tests
       public void GetBreadTotalPrice_ReturnsBreadTotalPriceIfDiscountCriteriaAreNotMet_Int()
       {
         int testBreadPrice = 5;
-        int testBreadQuant = 2;
-        int testBreadTotalPrice = 15;
+        int testBreadQuant = 1;
+        int testBreadTotalPrice = 5;
         Bread newBread = new Bread(testBreadPrice, testBreadQuant);
         int confirmBreadTotalPrice = newBread.GetBreadTotal();
         Assert.AreEqual(testBreadTotalPrice, confirmBreadTotalPrice);
