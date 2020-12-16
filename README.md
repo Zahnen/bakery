@@ -31,9 +31,12 @@ _This console application was created as my independent project for my eighth we
 * Program will allow Bread objects to hold a "quantity" property
 * Program will allow Pastry objects to hold a base "price" property
 * Program will allow Pastry objects to hold a "quantity" property
-* Program will calculate total price of either object based on base price & quantity. Bread object pricing will be calculated based on a buy-two-get-one-free offer. Pastry object pricing will be calculared based on a buy-two-get-one-half off offer.
 * Program will discount total price of Bread objects with a buy-two-get-one-free offer.
+* Program will discount total price of Bread objects if purchasing multiple results in multiple instances of a buy-two-get-one-free offer.
+* Program will return non-discounted total price of Bread objects if the order doesn't meet discount criteria.
 * Program will discount total price of Pastry objects with a buy-two-get-one-half off offer.
+* Program will discount total price of Pastry objects if purchasing multiple results in multiple instances of a buy-two-get-one-free offer.
+* Program will return non-discounted total price of Pastry objects if the order doesn't meet discount criteria.
 
 ---  
 
